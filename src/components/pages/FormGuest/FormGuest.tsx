@@ -45,13 +45,16 @@ const FormGuest = () => {
           "Content-Type": "application/json",
         },
       });
+      console.log(responseName);
+      
       const { data: responsePartner } = await axios.post(`${url}/aijan`, partnerData, {
         headers: {
           Accept: "application/json, text/plain, */*",
           "Content-Type": "application/json",
         },
       });
-
+      console.log(responsePartner);
+      
       const messageModel = (FormData: FormType) => {
         let messageTG = `КИМ: <b>${FormData.name}</b>\n`;
         messageTG += `ЖААРЫ: <b>${FormData.partner}</b>\n`;
