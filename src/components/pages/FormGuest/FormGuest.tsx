@@ -18,7 +18,6 @@ const url = process.env.NEXT_PUBLIC_API_URL;
 const FormGuest = () => {
   const [show, setShow] = useState(false);
   const [user, setUser] = useState<FormType | null>(null);
-  const [star, setStar] = useState<FormType | null>(null);
   const { register, handleSubmit } = useForm<FormType>({});
 
   useEffect(() => {
@@ -68,7 +67,6 @@ const FormGuest = () => {
       localStorage.setItem("name", JSON.stringify(FormData));
       localStorage.setItem("show", JSON.stringify(true));
       window.location.reload();
-      setStar(responseName);
     } catch (e) {
       console.error(e);
     }

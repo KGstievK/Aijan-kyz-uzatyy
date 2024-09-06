@@ -54,6 +54,7 @@ const GuestData: FC = () => {
   };
 
   useEffect(() => {
+    handleComplete
     fetchGuests();
   }, []);
 
